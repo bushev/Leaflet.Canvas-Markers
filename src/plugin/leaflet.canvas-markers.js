@@ -358,6 +358,8 @@ function layerFactory(L) {
 
         _executeListeners: function (event) {
 
+            if (!this._map) return;
+
             var me = this;
             var x = event.containerPoint.x;
             var y = event.containerPoint.y;
