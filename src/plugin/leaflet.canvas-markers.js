@@ -256,6 +256,8 @@ function layerFactory(L) {
 
         _reset: function () {
 
+            if (!this._map) return;
+
             var topLeft = this._map.containerPointToLayerPoint([0, 0]);
             L.DomUtil.setPosition(this._canvas, topLeft);
 
